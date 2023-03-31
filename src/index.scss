@@ -1,0 +1,679 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    overflow-y: hidden;
+   font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   -ms-overflow-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    
+      .heading{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: transparent;
+                color: white;
+                z-index: 999;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 30px 0;
+                .logo{
+                    margin-left: 50px;
+                }
+
+                ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    background-image: linear-gradient( to right, rgba(56, 56, 58, 0.5), rgba(147, 147, 151, 0.466), rgba(6, 16, 109, 0.473));
+                    padding: 0 8rem;
+                    padding-top: 25px;
+                    position: relative;
+                    ::before{
+                        position: absolute;
+                        content: "";
+                        background-color: rgb(207, 202, 202);
+                        width: 60%;
+                        height: 1px;
+                        left: -27rem;
+                        top: 33px;
+                    }
+                    li{
+                        list-style: none;
+                        border-bottom: 2px solid transparent;
+                        padding-bottom: 25px;
+
+                        &:hover{
+                            a{
+                                color: rgb(192, 186, 186);
+                            }
+                        }
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            transition: color ease-in-out .3s;
+                        }
+                    }
+                    .active{
+                        border-color: white;
+                    }
+                }
+                .menu{
+                    display: none;
+                }
+            }
+    .wrapper{
+        width: 400vw;
+        display: flex;
+        flex-direction: row;
+        .content{
+            width: 100vw;
+            color: white;
+        }
+        .one {
+            background-image: url('./assets/home/background-home-desktop.jpg');
+            position: relative;
+            .home{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                position: absolute;
+                top: 15rem;
+                left: 5rem;
+                .home_desc{
+                    width: 30%;
+                    .head{
+                        font-size: 18px;
+                    }
+                    h1{
+                        font-size: 6rem;
+                        letter-spacing: .7rem;
+                        margin: 2rem 0;
+                    }
+                    .more{
+                        color: rgb(230, 225, 225);
+                        font-size: 16px;
+                        text-align: justify;
+                        line-height: 1.7;
+                        letter-spacing: normal;
+                    }
+                }
+                .explore{
+                    width: 25%;
+                    h1{
+                        width: 250px;
+                        height: 250px;
+                        font-size: 30px;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        color: black;
+                        justify-content: center;
+                        letter-spacing: 4px;
+                    }
+                }
+            }
+           
+        }
+        .two {
+            background-image: url('./assets//destination/background-destination-desktop.jpg');
+            background-position: center;
+            background-size: cover;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            padding-left: 7rem;
+            padding-right: 3rem;
+            .destination{
+            display: flex;
+            align-items: center;
+            gap: 8em;
+            justify-content: space-around;
+            .dest__title{
+                h1{
+                    margin: 3rem 0;
+                    span{
+                        color: rgb(61, 60, 60);
+                    }
+                }
+                img{
+                    width: 420px;
+                }
+            }
+            .dest__desc{
+                width: 40%;
+                ul{
+                    display: flex;
+                    gap:20px;
+                    li{
+                        list-style: none;
+                        align-self: center;
+                        padding: 10px 3px;
+                        cursor: pointer;
+                        border-bottom: 1px solid transparent;
+                    }
+                    .active{
+                        border-color: #fff;
+                    }
+                }
+                h1{
+                    font-size:4rem;
+                    margin: 1.7rem 0;
+                }
+                p{
+                    line-height: 1.5;
+                    padding-bottom: 4rem;
+                    border-bottom: 1px white solid;
+                }
+                .addons{
+                    display: flex;
+                    align-items: center;
+                    gap: 8rem;
+                    padding-top: 3rem;
+                    .distance, .time{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+            }
+            }
+        }
+       .three {
+            background-image: url('./assets/crew/background-crew-desktop.jpg');
+            padding: 0 8rem ;
+            padding-top: 9rem;
+            overflow-x: hidden;
+            h1{
+                span{
+                    color: rgb(61, 60, 60);
+                }
+            }
+            .crew__container{
+                height: 100%;
+                display: flex;
+                margin-top: 6rem;
+                align-items: flex-start;
+                justify-content: space-between;
+                .left{
+                    width: 45%;
+                    height: 70%;
+                    .role{
+                        color: rgb(131, 128, 128);
+                        margin-bottom: 1.5rem;
+                        letter-spacing: .2rem;
+                        font-weight: 800;
+                    }
+                    .name{
+                        font-size: 45px;
+                        letter-spacing: .2rem;
+                        margin-bottom: 2rem;
+                    }
+                    p{
+                        width:85%;
+                        line-height: 1.5;
+                        font-size: 14px;
+                    }
+                }
+                .right{
+                    width: 40%;
+                    margin-top: -80px;
+                    img{
+                        width: 100%;
+                       
+                    }
+                }
+            }
+        }
+       .four {
+            background-image: url('./assets/technology/background-technology-desktop.jpg');
+            padding: 0 8rem ;
+            padding-top: 9rem;
+            h1{
+                span{
+                    color: rgb(61, 60, 60);
+                }
+            }
+            .tech__container{
+                display: flex;
+                margin-top: 6rem;
+                align-items: flex-start;
+                justify-content: space-between;
+                .desc{
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    gap: 60px;
+                    ul{
+                        list-style: none;
+                        li{
+                            margin-bottom: 30px;
+                            border: 1px solid white;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                        }
+                        .tech_bg{
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                    .desc__desc{
+                        p{
+                            font-size: 14px;
+                            color: rgb(124, 116, 116);
+                        }
+                        h1{
+                            font-size: 30px;
+                            letter-spacing: .3rem;
+                            margin: .6rem 0;
+                        }
+                        small{
+                            color: rgb(124, 116, 116);
+                            line-height: 1.5;
+                        }
+                    }
+                }
+                .tech_img{
+                    width: 40%;
+                    margin-top: -40px;
+                    .portrait{
+                        display: block;
+                    }
+                    .landscape{
+                        display: none;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+  
+     .container{
+        .heading{
+            padding: 20px 0;
+            .logo{
+                margin-left: 30px;
+            }
+            ul{
+                padding: 0 2rem;
+                padding-top: 20px;
+                gap: 20px;
+                li{
+                    a{
+                        gap: 5px;
+                    }
+                }
+                ::before{
+                    display: none;
+                }
+            }
+        }
+        .wrapper{
+            .one{
+                background-image: url('./assets/home/background-home-tablet.jpg');
+                width: 100vw;
+                .home{
+                    top: 10rem;
+                    flex-direction: column;
+                    gap: 8rem;
+                    text-align: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin-left: -5.1rem;
+                    .home_desc{
+                        width: 90%;
+                        margin: 0 auto;
+                        .head{
+                            font-size: 16px;
+                        }
+                        h1{
+                            font-size: 5rem;
+                        }
+                        .more{
+                            text-align: center;
+                        }
+                    }
+                    .explore{
+                        width: 100%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                        
+                    }
+                }
+            }
+            .two{
+                background-image: url('./assets/destination/background-destination-tablet.jpg');
+                .destination{
+                    flex-direction: column;
+                    gap: 4em;
+                    margin-left: -4rem;
+                    .dest__title{
+                        width: 100%;
+                        text-align: center;
+                        img{
+                            width: 300px;
+                        }
+                    }
+                    .dest__desc{
+                        width: 100%;
+                        text-align: center;
+                        ul{
+                            justify-content: center;
+                        }
+                        .addons{
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+            .three{
+                background-image: url('./assets/crew/background-crew-tablet.jpg');
+                text-align: center;
+                .crew__container{
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 3rem;
+                    text-align: center;
+                    .left{
+                        width: 100%;
+                        p{
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+                    .right{
+                        width: 100%;
+                        margin-top: 6rem;
+                    }
+                }
+            }
+            .four{
+                background-image: url('./assets/technology/background-technology-tablet.jpg');
+                padding: 0 4rem;
+                padding-top: 9rem;
+                
+                .tech__container{
+                    flex-direction: column-reverse;
+                    gap: 3rem;
+                    .desc{
+                        width: 100%;
+                        flex-direction: column;
+                        gap: 30px;
+                        ul{
+                            display: flex;
+                            gap: 30px;
+                        }
+                        .desc__desc{
+                            width: 100%;
+                            text-align: center;
+                            margin-left: -1rem;
+                            small{
+                                font-size: 16px;
+                              
+                            }
+                        }
+                    }
+                    .tech_img{
+                        width: 100%;
+                        .portrait{
+                            display: none;
+                        }
+                        .landscape{
+                            width: 100%;
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+     }   
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+      .container{
+        .heading{
+            padding: 20px 0;
+            background-color: transparent;
+            .logo{
+                margin-left: 20px;
+                img{
+                    width: 37px;
+                }
+            }
+            ul{
+               display: none;
+                li{
+                    a{
+                        gap: 5px;
+                    }
+                }
+            }
+            .showul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                position: fixed;
+                right: 0;
+                top: 4rem;
+                background-color: black;
+                transform: translateY(0);
+                transition: transform ease-in-out .3s;
+            }
+            .hideul{
+                transform: translateY(-150%);
+            }
+            .menu{
+                display: block;
+                font-size: 37px;
+                padding-right: 20px;
+            }
+        }
+        .wrapper{
+            width: 100vw;
+            flex-direction: column;
+            .content{
+                width: 100%;
+            }
+            .one{
+                background-image: url('./assets/home/background-home-mobile.jpg');
+                position: unset;
+                .home{
+                    width: 100%;
+                    margin-top: 6rem;
+                    gap: 3rem;
+                    position: unset;
+                    margin-left: 0;
+                    .home_desc{
+                        width: 100%;
+                        
+                        .head{
+                            font-size: 14px;
+                        }
+                        h1{
+                            font-size: 3rem;
+                        }
+                        .more{
+                            text-align: center;
+                            font-size: 14px;
+                        }
+                    }
+                    .explore{
+                        width: 100%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                        
+                    }
+                }
+            }
+            .two{
+                background-image: url('./assets/destination/background-destination-mobile.jpg');
+                width: 100vw;
+                padding-top: 3rem;
+                .destination{
+                    width: 100%;
+                    flex-direction: column;
+                    gap: 1em;
+                    margin-left: -40px ;
+                    .dest__title{
+                        width: 200%;
+                        text-align: center;
+                        h1{
+                            font-size: 16px;
+                        }
+                        img{
+                            width: 200px;
+                        }
+                    }
+                    .dest__desc{
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                        ul{
+                            justify-content: center;
+                        }
+                        .moon{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            h1{
+                                font-size: 3rem;
+                                margin: 20px 0;
+                            }
+                            p{
+                                width: 150%;
+                                margin-left: .4rem;
+                                
+                            }
+                        }
+                        .addons{
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-left: .2rem;
+                            gap: 2rem;
+                            .distance, .time{
+                                font-size: 14px;
+                                span{
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .three{
+                background-image: url('./assets/crew/background-crew-mobile.jpg');
+                text-align: center;
+                padding: 0;;
+                width: 100%;
+                padding-top: 6rem;
+                h1{
+                    font-size: 16px;
+                    width: 100%;
+                }
+                .crew__container{
+                    height: unset;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 3rem;
+                    text-align: center;
+                    width: 100%;
+                    padding: 0 1rem;
+                    .left{
+                        width: 100%;
+                        p{
+                            text-align: center;
+                            width: 100%;
+                        }
+                        .name{
+                            font-size: 30px;
+                        }
+                    }
+                    .right{
+                        width: 100%;
+                        margin-top: -1.5rem;
+                        img{
+                            width: 80%;   
+                        } 
+                    } 
+                }
+            }
+            .four{
+                background-image: url('./assets/technology/background-technology-mobile.jpg');
+                padding: 5rem 1rem;
+               
+                .tech__container{
+                    .tech_img{
+                        width: 100%;
+                        .portrait{
+                            display: block;
+                        }
+                        .landscape{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+     }   
+}
+.swiper-pagination {
+    position: absolute;
+    text-align:left;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top,   350px);
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+@media screen and (max-width: 1024px) {
+    .swiper-pagination {
+        text-align: center;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 8px);
+        top: var(--swiper-pagination-top,   300px);
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    
+}
+
+
+
+  
